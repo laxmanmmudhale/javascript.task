@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <form >
+       
+        <label>Name :</label>
+         <input type="text" id="name" placeholder="Enter your name">
+          <br> <br>
+
+         <label >City :  </label>
+         <input type="text" id="city" placeholder="Name your City">
+         <br><br>
+
+         <label> Email :</label>
+         <input type="text" id="email" placeholder="@gmail.com">
+
+         <br><br>
+         <label> Mobile No :</label>
+         <input type="text" id="phone"  placeholder="Phone No">
+        </div>
+         <br>
+         <br>
+         <!-- <button onclick="sub()">Submit</button> -->
+         <input type="button" id="submit" onclick="sub()" value="click">
+    </form>
+    <p id="demo"></p>
+
+    <script>
+        function sub(){
+            let name =  $("#name").val();
+            let city = $("#city").val();
+            let email = $("#email").val();
+            let phone = $("#phone").val();
+       
+        }
+        json_info ={
+            "Name": "",
+            "City": " ",
+            "Email": " ",
+            "Phone": " "
+        }
+        json_info.Name = name;
+        json_info.City = city;
+        json_info.Email = email;
+        json_info.Phone = phone;
+   
+        let x = JSON.stringify(json_info);
+        document.getElementById("demo").innerHTML += x;
+        // console.log(x);
+    </script>
+    
+</body>
+</html>

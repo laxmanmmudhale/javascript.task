@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+</head>
+<style>
+       #demo{
+              text-align: center;
+              border: 2PX solid rgb(102, 80, 80);
+              border-radius: 7px;
+       }
+</style>
+
+<body> 
+       <div >
+         <h1>Form</h1>
+         <label>Name :</label>
+         <input type="text" id="name" placeholder="Enter your name">
+          <br> <br>
+
+         <label >City :  </label>
+         <input type="text" id="city" placeholder="Name your City">
+         <br><br>
+
+         <label> Email :</label>
+         <input type="text" id="email" placeholder="@gmail.com">
+
+         <br><br>
+         <label> Mobile No :</label>
+         <input type="text" id="phone"  placeholder="Phone No">
+        </div>
+         <br>
+         <br>
+         <button onclick="sub()">Submit</button>
+         <div class="col-lg-6">
+              <p id="demo">
+<br> <br>
+              </p>
+
+         </div>
+       
+
+        <script>
+               function sub(){
+                         let x = document.getElementById("name")
+
+                         let y = document.getElementById("city")
+
+                         let z = document.getElementById("email")
+
+                         let w = document.getElementById("phone")
+
+                        let u = {
+                            "name" : x.value,
+                            "city" : y.value,
+                            "email" : z.value,
+                            "phone" : w.value
+                        }
+                        let d = JSON.stringify(u)
+                        
+                        document.getElementById("demo").innerHTML += d ;
+                        
+                          
+                         if(x.value == "",y.value =="",z.value =="",w.value ==""){
+                            alert("enter valid massge")
+                         }
+                         else{
+                            let array =[] 
+                            array.push(d)
+                            x.value ;
+                            y.value ;
+                            z.value ;
+                            w.value ;
+
+
+
+
+                                   let a = "<tr>"
+                                          
+                                   for(let  i= 0; i<array.length; i++){
+                                          a +="<td>"
+                                          a += array[i]
+                                          a += "</td>"
+
+                                   }
+                                   // document.getElementById("demo").innerHTML += a;
+                         }
+                  
+               }
+
+        </script>
+
+
+
+</body>
+</html>
